@@ -17,7 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Create new list item
         const li = document.createElement('li');
-        li.textContent = taskText;
+
+        const span = document.createElement('span');
+        span .textContent = taskText;
+        
 
         // Create remove button
         const removeBtn = document.createElement('button');
@@ -30,7 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Append remove button to li, then append li to task list
+        li.appendChild(span);
         li.appendChild(removeBtn);
+
+        //apend lito the task list
         taskList.appendChild(li);
 
         // Clear input field
